@@ -647,7 +647,7 @@ bool download_user_loved_tracks_feed_pages(pfc::string8 lastfm_user, pfc::list_t
 	{
 		t_size page = 1;
 		pfc::string8 url;
-		url << "http://ws.audioscrobbler.com/2.0/?method=user.getlovedtracks&user=" << stringcvt_escape_url(lastfm_user).get_ptr() << "&limit=" << page_limit << "&page=" << page << "&api_key=b25b959554ed76058ac220b7b2e0a026";
+		url << "http://ws.audioscrobbler.com/2.0/?method=user.getlovedtracks&user=" << stringcvt_escape_url(lastfm_user).get_ptr() << "&limit=" << page_limit << "&page=" << page << "&api_key=198d8247e5e54d2d1173b1b28fcc7717";
 		pfc::string8 xmlfile = http_get_xml(url, p_abort);
 		XMLNode root = XMLNode::parseString(xmlfile, "lfm");
 
@@ -677,7 +677,7 @@ bool download_user_loved_tracks_feed_pages(pfc::string8 lastfm_user, pfc::list_t
 
 	for (t_size page = 2; page <= number_of_pages && track_iter < spl_tracks_feed_limit; page++) {
 		pfc::string8 url;
-		url << "http://ws.audioscrobbler.com/2.0/?method=user.getlovedtracks&user=" << stringcvt_escape_url(lastfm_user).get_ptr() << "&limit=" << page_limit << "&page=" << page << "&api_key=b25b959554ed76058ac220b7b2e0a026";
+		url << "http://ws.audioscrobbler.com/2.0/?method=user.getlovedtracks&user=" << stringcvt_escape_url(lastfm_user).get_ptr() << "&limit=" << page_limit << "&page=" << page << "&api_key=198d8247e5e54d2d1173b1b28fcc7717";
 		pfc::string8 xmlfile = http_get_xml(url, p_abort);
 		XMLNode root = XMLNode::parseString(xmlfile, "lfm");
 		XMLNode xml_list = root.getChildNode("lovedtracks");
@@ -709,7 +709,7 @@ bool download_user_top_tracks_and_playcounts_feed_pages(pfc::string8 lastfm_user
 	{
 		t_size page = 1;
 		pfc::string8 url;
-		url << "http://ws.audioscrobbler.com/2.0/?method=user.gettoptracks&user=" << stringcvt_escape_url(lastfm_user).get_ptr() << "&period=" << period << "&limit=" << page_limit << "&page=" << page << "&api_key=b25b959554ed76058ac220b7b2e0a026";
+		url << "http://ws.audioscrobbler.com/2.0/?method=user.gettoptracks&user=" << stringcvt_escape_url(lastfm_user).get_ptr() << "&period=" << period << "&limit=" << page_limit << "&page=" << page << "&api_key=198d8247e5e54d2d1173b1b28fcc7717";
 		pfc::string8 xmlfile = http_get_xml(url, p_abort);
 		XMLNode root = XMLNode::parseString(xmlfile, "lfm");
 
@@ -745,7 +745,7 @@ bool download_user_top_tracks_and_playcounts_feed_pages(pfc::string8 lastfm_user
 
 	for (t_size page = 2; page <= number_of_pages && track_iter < spl_tracks_feed_limit; page++) {
 		pfc::string8 url;
-		url << "http://ws.audioscrobbler.com/2.0/?method=user.gettoptracks&user=" << stringcvt_escape_url(lastfm_user).get_ptr() << "&period=" << period << "&limit=" << page_limit << "&page=" << page << "&api_key=b25b959554ed76058ac220b7b2e0a026";
+		url << "http://ws.audioscrobbler.com/2.0/?method=user.gettoptracks&user=" << stringcvt_escape_url(lastfm_user).get_ptr() << "&period=" << period << "&limit=" << page_limit << "&page=" << page << "&api_key=198d8247e5e54d2d1173b1b28fcc7717";
 		pfc::string8 xmlfile = http_get_xml(url, p_abort);
 		XMLNode root = XMLNode::parseString(xmlfile, "lfm");
 		XMLNode xml_list = root.getChildNode("toptracks");
@@ -783,7 +783,7 @@ bool download_user_recent_tracks_feed_pages(pfc::string8 lastfm_user, pfc::list_
 	{
 		t_size page = 1;
 		pfc::string8 url;
-		url << "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=" << stringcvt_escape_url(lastfm_user).get_ptr() << "&limit=" << page_limit << "&page=" << page << "&api_key=b25b959554ed76058ac220b7b2e0a026";
+		url << "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=" << stringcvt_escape_url(lastfm_user).get_ptr() << "&limit=" << page_limit << "&page=" << page << "&api_key=198d8247e5e54d2d1173b1b28fcc7717";
 		pfc::string8 xmlfile = http_get_xml(url, p_abort);
 		XMLNode root = XMLNode::parseString(xmlfile, "lfm");
 
@@ -809,7 +809,7 @@ bool download_user_recent_tracks_feed_pages(pfc::string8 lastfm_user, pfc::list_
 
 	for (t_size page = 2; page <= number_of_pages && track_iter < spl_tracks_feed_limit; page++) {
 		pfc::string8 url;
-		url << "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=" << stringcvt_escape_url(lastfm_user).get_ptr() << "&limit=" << page_limit << "&page=" << page << "&api_key=b25b959554ed76058ac220b7b2e0a026";
+		url << "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=" << stringcvt_escape_url(lastfm_user).get_ptr() << "&limit=" << page_limit << "&page=" << page << "&api_key=198d8247e5e54d2d1173b1b28fcc7717";
 		pfc::string8 xmlfile = http_get_xml(url, p_abort);
 		XMLNode root = XMLNode::parseString(xmlfile, "lfm");
 		XMLNode xml_list = root.getChildNode("recenttracks");
@@ -837,7 +837,7 @@ bool download_artist_top_tracks_and_playcounts_feed_pages(pfc::string8 artist_na
 	{
 		t_size page = 1;
 		pfc::string8 url;
-		url << "http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=" << stringcvt_escape_url(artist_name).get_ptr() << "&limit=" << page_limit << "&page=" << page << "&api_key=b25b959554ed76058ac220b7b2e0a026";
+		url << "http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=" << stringcvt_escape_url(artist_name).get_ptr() << "&limit=" << page_limit << "&page=" << page << "&api_key=198d8247e5e54d2d1173b1b28fcc7717";
 		pfc::string8 xmlfile = http_get_xml(url, p_abort);
 		XMLNode root = XMLNode::parseString(xmlfile, "lfm");
 
@@ -873,7 +873,7 @@ bool download_artist_top_tracks_and_playcounts_feed_pages(pfc::string8 artist_na
 
 	for (t_size page = 2; page <= number_of_pages && track_iter < spl_tracks_feed_limit; page++) {
 		pfc::string8 url;
-		url << "http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=" << stringcvt_escape_url(artist_name).get_ptr() << "&limit=" << page_limit << "&page=" << page << "&api_key=b25b959554ed76058ac220b7b2e0a026";
+		url << "http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=" << stringcvt_escape_url(artist_name).get_ptr() << "&limit=" << page_limit << "&page=" << page << "&api_key=198d8247e5e54d2d1173b1b28fcc7717";
 		pfc::string8 xmlfile = http_get_xml(url, p_abort);
 		XMLNode root = XMLNode::parseString(xmlfile, "lfm");
 		XMLNode xml_list = root.getChildNode("toptracks");
@@ -911,7 +911,7 @@ bool download_tag_top_tracks_feed_pages(pfc::string8 lastfm_tag, pfc::list_t<pfc
 	{
 		t_size page = 1;
 		pfc::string8 url;
-		url << "http://ws.audioscrobbler.com/2.0/?method=tag.gettoptracks&tag=" << stringcvt_escape_url(lastfm_tag).get_ptr() << "&limit=" << page_limit << "&page=" << page << "&api_key=b25b959554ed76058ac220b7b2e0a026";
+		url << "http://ws.audioscrobbler.com/2.0/?method=tag.gettoptracks&tag=" << stringcvt_escape_url(lastfm_tag).get_ptr() << "&limit=" << page_limit << "&page=" << page << "&api_key=198d8247e5e54d2d1173b1b28fcc7717";
 		pfc::string8 xmlfile = http_get_xml(url, p_abort);
 		XMLNode root = XMLNode::parseString(xmlfile, "lfm");
 
@@ -941,7 +941,7 @@ bool download_tag_top_tracks_feed_pages(pfc::string8 lastfm_tag, pfc::list_t<pfc
 
 	for (t_size page = 2; page <= number_of_pages && track_iter < spl_tracks_feed_limit; page++) {
 		pfc::string8 url;
-		url << "http://ws.audioscrobbler.com/2.0/?method=tag.gettoptracks&tag=" << stringcvt_escape_url(lastfm_tag).get_ptr() << "&limit=" << page_limit << "&page=" << page << "&api_key=b25b959554ed76058ac220b7b2e0a026";
+		url << "http://ws.audioscrobbler.com/2.0/?method=tag.gettoptracks&tag=" << stringcvt_escape_url(lastfm_tag).get_ptr() << "&limit=" << page_limit << "&page=" << page << "&api_key=198d8247e5e54d2d1173b1b28fcc7717";
 		pfc::string8 xmlfile = http_get_xml(url, p_abort);
 		XMLNode root = XMLNode::parseString(xmlfile, "lfm");
 		XMLNode xml_list = root.getChildNode("toptracks");
@@ -968,7 +968,7 @@ bool download_tag_top_tracks_feed_pages(pfc::string8 lastfm_tag, pfc::list_t<pfc
 bool download_user_friends_feed(pfc::string8 lastfm_user, pfc::list_t<pfc::string8>& users, abort_callback& p_abort)
 {
 	pfc::string8 url;
-	url << "http://ws.audioscrobbler.com/2.0/?method=user.getfriends&user=" << stringcvt_escape_url(lastfm_user).get_ptr() << "&limit=" << spl_friends_neighbours_feed_limit << "&api_key=b25b959554ed76058ac220b7b2e0a026";
+	url << "http://ws.audioscrobbler.com/2.0/?method=user.getfriends&user=" << stringcvt_escape_url(lastfm_user).get_ptr() << "&limit=" << spl_friends_neighbours_feed_limit << "&api_key=198d8247e5e54d2d1173b1b28fcc7717";
 	pfc::string8 xmlfile = http_get_xml(url, p_abort);
 	XMLNode root = XMLNode::parseString(xmlfile, "lfm");
 
@@ -1000,7 +1000,7 @@ bool download_user_friends_feed(pfc::string8 lastfm_user, pfc::list_t<pfc::strin
 bool download_user_neighbours_feed(pfc::string8 lastfm_user, pfc::list_t<pfc::string8>& users, abort_callback& p_abort)
 {
 	pfc::string8 url;
-	url << "http://ws.audioscrobbler.com/2.0/?method=user.getneighbours&user=" << stringcvt_escape_url(lastfm_user).get_ptr() << "&limit=" << spl_friends_neighbours_feed_limit << "&api_key=b25b959554ed76058ac220b7b2e0a026";
+	url << "http://ws.audioscrobbler.com/2.0/?method=user.getneighbours&user=" << stringcvt_escape_url(lastfm_user).get_ptr() << "&limit=" << spl_friends_neighbours_feed_limit << "&api_key=198d8247e5e54d2d1173b1b28fcc7717";
 	pfc::string8 xmlfile = http_get_xml(url, p_abort);
 	XMLNode root = XMLNode::parseString(xmlfile, "lfm");
 
@@ -1032,7 +1032,7 @@ bool download_user_neighbours_feed(pfc::string8 lastfm_user, pfc::list_t<pfc::st
 bool download_artist_similar_artists_feed(pfc::string8 artist_name, pfc::list_t<pfc::string8>& artists, abort_callback& p_abort)
 {
 	pfc::string8 url;
-	url << "http://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist=" << stringcvt_escape_url(artist_name).get_ptr() << "&limit=" << spl_similar_artists_feed_limit << "&api_key=b25b959554ed76058ac220b7b2e0a026";
+	url << "http://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist=" << stringcvt_escape_url(artist_name).get_ptr() << "&limit=" << spl_similar_artists_feed_limit << "&api_key=198d8247e5e54d2d1173b1b28fcc7717";
 	pfc::string8 xmlfile = http_get_xml(url, p_abort);
 	XMLNode root = XMLNode::parseString(xmlfile, "lfm");
 
@@ -1064,7 +1064,7 @@ bool download_artist_similar_artists_feed(pfc::string8 artist_name, pfc::list_t<
 bool download_similar_tracks_feed(pfc::string8 track_title, pfc::string8& track_artist, pfc::list_t<pfc::string8>& track_titles, pfc::list_t<pfc::string8>& track_artists, abort_callback& p_abort)
 {
 	pfc::string8 url;
-	url << "http://ws.audioscrobbler.com/2.0/?method=track.getsimilar&track=" << stringcvt_escape_url(track_title).get_ptr() << "&artist=" << stringcvt_escape_url(track_artist).get_ptr() << "&limit=" << spl_similar_tracks_feed_limit << "&api_key=b25b959554ed76058ac220b7b2e0a026";
+	url << "http://ws.audioscrobbler.com/2.0/?method=track.getsimilar&track=" << stringcvt_escape_url(track_title).get_ptr() << "&artist=" << stringcvt_escape_url(track_artist).get_ptr() << "&limit=" << spl_similar_tracks_feed_limit << "&api_key=198d8247e5e54d2d1173b1b28fcc7717";
 	pfc::string8 xmlfile = http_get_xml(url, p_abort);
 	XMLNode root = XMLNode::parseString(xmlfile, "lfm");
 
@@ -1101,7 +1101,7 @@ bool download_similar_tracks_feed(pfc::string8 track_title, pfc::string8& track_
 bool download_top_tags_feed(pfc::string8& tags)
 {
 	pfc::string8 url;
-	url << "http://ws.audioscrobbler.com/2.0/?method=tag.gettoptags&api_key=b25b959554ed76058ac220b7b2e0a026";
+	url << "http://ws.audioscrobbler.com/2.0/?method=tag.gettoptags&api_key=198d8247e5e54d2d1173b1b28fcc7717";
 	foobar2000_io::abort_callback_dummy p_abort;
 	pfc::string8 xmlfile = http_get_xml(url, p_abort);
 	XMLNode root = XMLNode::parseString(xmlfile, "lfm");
@@ -1143,7 +1143,7 @@ bool download_top_tags_feed(pfc::string8& tags)
 bool download_playlists_feed(pfc::string8& playlist_ids, pfc::string8& playlist_names)
 {
 	pfc::string8 url;
-	url << "http://ws.audioscrobbler.com/2.0/?method=user.getplaylists&user=" << stringcvt_escape_url(spl_lastfm_user).get_ptr() << "&api_key=b25b959554ed76058ac220b7b2e0a026";
+	url << "http://ws.audioscrobbler.com/2.0/?method=user.getplaylists&user=" << stringcvt_escape_url(spl_lastfm_user).get_ptr() << "&api_key=198d8247e5e54d2d1173b1b28fcc7717";
 	foobar2000_io::abort_callback_dummy p_abort;
 	pfc::string8 xmlfile = http_get_xml(url, p_abort);
 	XMLNode root = XMLNode::parseString(xmlfile, "lfm");
@@ -1182,7 +1182,7 @@ bool download_playlists_feed(pfc::string8& playlist_ids, pfc::string8& playlist_
 bool download_playlist_tracks_feed(pfc::string8 playlist_id, pfc::list_t<pfc::string8>& track_titles, pfc::list_t<pfc::string8>& track_artists, abort_callback& p_abort)
 {
 	pfc::string8 url;
-	url << "http://ws.audioscrobbler.com/2.0/?method=playlist.fetch&playlistURL=lastfm://playlist/" << stringcvt_escape_url(playlist_id).get_ptr() << "&api_key=b25b959554ed76058ac220b7b2e0a026";
+	url << "http://ws.audioscrobbler.com/2.0/?method=playlist.fetch&playlistURL=lastfm://playlist/" << stringcvt_escape_url(playlist_id).get_ptr() << "&api_key=198d8247e5e54d2d1173b1b28fcc7717";
 	pfc::string8 xmlfile = http_get_xml(url, p_abort);
 	XMLNode root = XMLNode::parseString(xmlfile, "lfm");
 
